@@ -284,11 +284,25 @@ export const baseStyles = css`
     display: flex;
     align-items: center;
   }
+   
+  @keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
 
   .navBarBrand img {
+    height: 50px;
     width: 120px;
     margin-right: 6px;
     display: inline-block;
+    animation: bounce 2s infinite;
   }
   .navBarUL li {
     list-style-type: none;
@@ -371,7 +385,7 @@ export const baseStyles = css`
     /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); */
     background-color: #f8f8f8;
     padding: 18px 16px;
-    font-family: 'Poppins';
+    font-family: 'Roboto';
     font-size: 18px;
     font-weight: 600;
     color: #001934;
@@ -454,7 +468,10 @@ export const baseStyles = css`
     color: #fff !important;
   }
   .firstLevel ul li .collapser svg path {
-    fill: #fff !important;
+    fill: #1ED3C6 !important;
+  }
+  .firstLevel ul li:hover .collapser svg path {
+    fill: #fff !important; /* Change this to your desired hover color */
   }
   .active .collapser > svg > path {
     fill: #001933 !important;

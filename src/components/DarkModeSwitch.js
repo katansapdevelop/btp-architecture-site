@@ -77,6 +77,14 @@ const StyledSwitch = styled('div')`
   .slider.round:before {
     border-radius: 50%;
   }
+
+  .firstLevel ul li .collapser svg path {
+    fill: #f0bb31 !important;
+  }
+
+  input:checked + .firstLevel ul li .collapser svg path {
+    fill: #001934 !important;
+  }
 `;
 
 export const DarkModeSwitch = ({ isDarkThemeActive, toggleActiveTheme }) => (
